@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nano Folio - Simple HTML Template</title>
+	<link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+	<link href="css/magnific-popup.min.css" rel="stylesheet">
+    <link href="css/tooplate-style.css" rel="stylesheet">
+<!--
+
+Tooplate 2122 Nano Folio
+
+https://www.tooplate.com/view/2122-nano-folio
+
+-->
+</head>
+<body>
+	<div class="menu-bar">
+		<ul>
+			<li class="active"><a href="#"><i class="fas fa-home"></i>AnaSayfa</a> </li>
+			<li><a href="hakkımda.html"><i class="fas fa-user"></i>Hakkımızda</a> </li>
+			<li><a href="iletişim.html"><i class="fas fa-phone"></i>İletişim</a>
+				
+				
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="tm-container-fluid">
+		<section class="tm-site-header tm-flex-center tm-mb-50 tm-bgcolor-1 tm-border-rounded">
+			
+			<img src="img/logo.webp"/>
+			<h1>ALARKO GYO</h1>
+		</section>
+
+		<section class="tm-about tm-mb-80 tm-p-50 tm-bgcolor-2 tm-border-rounded">
+			<div class="tm-about-header tm-flex-center">
+				<i class="fas fa-users fa-2x"></i>
+				<h2>HAKKIMIZDA</h2>
+			</div>
+			<div class="tm-about-text">
+				<p class="tm-mb-40">Alarko Gayrimenkul yatırım ortaklığı “ALGYO” 1996 yılında kurulmuştur. Türkiye’de ilk halka açılan GYO şirketidir.
+
+					Bağlı bulunduğu Alarko Holding’in Gayrimenkul geliştirme sektöründeki iştiraki olan Alarko GYO portfoyünde bulunan gayrimenküllerin kira geliri ile yatırımcısına sabit getiri sağlamakta aynı zamanda da geliştirme amacı ile elinde değerli arazileri barındırmaktadır.
+					
+					Sahip olduğu Gayrimenküllerin zaman içerisinde değerlenmesi ve başarılı nakit yönetimi ile şirket değeri kurulduğundan bugüne sürekli bir artış göstermiştir.</p>
+				<p class="tm-mb-0">Lütfen arkadaşlarınıza anlatarak bizi destekleyin. Bize ulaşmak için <a href="mailto:akgndzelif1903@gmail.com">buraya</a> tıklayabilirsiniz.</a></p>
+			</div>
+		</section>
+
+		
+		<section class="tm-contact tm-mb-50 tm-bgcolor-3 tm-border-rounded">
+			<div class="tm-contact-header tm-flex-center">
+				<i class="fas fa-map-pin fa-3x"></i>
+				<h2>İletişim</h2>
+			</div>
+			<div class="tm-contact-info">
+				<address class="tm-mb-30">
+					Bize her zaman, istediğiniz yerde, istediğiniz şekilde ulaşabilirsiniz.
+				</address>
+				<div class="tm-text-white tm-mb-40">Tel: <a href="tel:0100200340" class="tm-link-white">05464390691</a></div>
+				<div class="tm-flex">
+					<a href="https://facebook.com" class="tm-social-link"><i class="fab fa-facebook"></i></a>
+					<a href="https://twitter.com" class="tm-social-link"><i class="fab fa-twitter"></i></a>
+					<a href="https://instagram.com" class="tm-social-link"><i class="fab fa-instagram"></i></a>
+				</div>
+			</div>
+			<div class="tm-contact-form-container">
+				<form id="contact-form" action="" method="POST" class="tm-contact-form">
+		          	<input type="text" name="name" placeholder="name" required="" />
+		          	<input type="email" name="email" placeholder="email" required="" />
+		          	<textarea rows="5" name="message" class="tm-mb-30" placeholder="message" required=""></textarea>		          	
+		          	<button type="submit" class="tm-right tm-btn-submit">send</button>          	
+		        </form>    
+			</div>
+		</section>
+
+		<footer class="tm-footer">
+			Alarko Logo Tanıtımı:<a href="https://www.yandex.com.tr/gorsel/search?from=tabbar&img_url=https%3A%2F%2Fwww.denizlikombibakimi.com%2Fresimler%2Fkategori%2Falarko1571041438.17097.jpg&lr=11503&pos=4&rpt=simage&text=alarko%20gyo" class="tm-link-gray"> alarko</a>
+		</footer>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script>
+		$(function(){
+		  	// Init the image gallery
+		  	var $gallery = $(".tm-gallery").isotope({
+		    	itemSelector: ".tm-gallery-item",
+		    	layoutMode: "fitRows"
+		  	});
+		  
+		  	// Layout Isotope after each image loads
+		  	$gallery.imagesLoaded().progress(function() {
+		    	$gallery.isotope("layout");
+		  	});
+
+		  	$(".filters-button-group").on("click", "a", function(e) {
+		  		e.preventDefault();
+			    var filterValue = $(this).attr("data-filter");
+			    $gallery.isotope({ filter: filterValue });
+			    $('.filters-button-group a').removeClass('active');
+			    $(this).addClass('active');
+			});
+
+		  	// Magnific Pop up
+		  	$('.tm-gallery').magnificPopup({
+		  		delegate: 'a',
+			  	type: 'image',
+				  gallery: { enabled: true }
+			});
+		});
+	</script>
+</body>
+</html>
